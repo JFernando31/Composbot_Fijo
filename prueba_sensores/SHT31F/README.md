@@ -49,7 +49,8 @@ Las posibles soluciones para este problemas son:
 - Usa entornos virtuales 
 - Si el paquete existe utiliza `sudo get install python3-nombre-paquete`
 - Fuerza la instalacion con `--break-system-packages`
-Si los paquetes estan instalados correctamente y la conexion es correcta a ejecutar el script `sht31f.py` deberia mostrar este resultado.
+
+Si los paquetes están instalados correctamente y la conexion es correcta a ejecutar el script `sht31f.py` deberia mostrar este resultado.
 ~~~~
 Temperature: 22.2 C
 Humidity: 48.5 %
@@ -65,6 +66,7 @@ Si al ejecutar el script ves el siguiente error
 ValueError: No I2C device at address: 0x44
 ~~~~
 Revisa el selector de direccion i2c del sensor sht31f que este de acuerdo al que utilizaste en tu script
+![img_1.png](img_1.png)
 ~~~~
 sensor = adafruit_sht31d.SHT31D(i2c, address=0x45) # Direccion i2c del sensor sht31f "0x45 o 0x44"
 ~~~~
