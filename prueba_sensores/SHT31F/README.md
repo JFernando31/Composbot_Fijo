@@ -5,7 +5,7 @@ El sensor SHT31-F ofrece mediciones precisas de temperatura y humedad con protec
 ___
 >[!NOTE]
 > 
-> Si estas utilizando ubuntu en tu raspberry pi recuerda activar el puerto I2C desde raspi-config
+> Si estas utilizando ubuntu en tu raspberry pi recuerda activar el puerto I2C desde `raspi-config`
 - ### Diagrama de conexión 
 ![img.png](img.png)
 
@@ -47,5 +47,24 @@ hint: See PEP 668 for the detailed specification.
 Esto se debe a que algunas versiones recientes de ubuntu bloquean el uso de pip en el sistema global. 
 Las posibles soluciones para este problemas son: 
 - Usa entornos virtuales 
-- Si el paquete existe utiliza sudo get install python3-nombre-paquete
-- Fuerza la instalacion con --break-system-packages
+- Si el paquete existe utiliza `sudo get install python3-nombre-paquete`
+- Fuerza la instalacion con `--break-system-packages`
+Si los paquetes estan instalados correctamente y la conexion es correcta a ejecutar el script `sht31f.py` deberia mostrar este resultado.
+~~~~
+Temperature: 22.2 C
+Humidity: 48.5 %
+
+Temperature: 22.1 C
+Humidity: 48.5 %
+
+Temperature: 22.1 C
+Humidity: 48.5 %
+~~~~
+Si al ejecutar el script ves el siguiente error 
+~~~~
+ValueError: No I2C device at address: 0x44
+~~~~
+Revisa el selector de direccion i2c del sensor sht31f que este de acuerdo al que utilizaste en tu script
+~~~~
+sensor = adafruit_sht31d.SHT31D(i2c, address=0x45) # Direccion i2c del sensor sht31f "0x45 o 0x44"
+~~~~
