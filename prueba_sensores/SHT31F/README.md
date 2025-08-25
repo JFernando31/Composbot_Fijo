@@ -7,7 +7,7 @@ ___
 > 
 > Si estas utilizando ubuntu en tu raspberry pi recuerda activar el puerto I2C desde `raspi-config`
 - ### Diagrama de conexión 
-![img.png](img.png)
+![img_2.png](img_2.png)
 
 | Raspberry pi 5  | SHT31-F |
 |---|---|
