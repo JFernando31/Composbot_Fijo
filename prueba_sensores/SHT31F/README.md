@@ -9,12 +9,12 @@ ___
 - ### Diagrama de conexión 
 ![img_2.png](img_2.png)
 
-| Raspberry pi 5  | SHT31-F |
-|---|---|
-| PIN3/GPIO2/SDA  | SDA  |
-| PIN5/GPIO3/SCL  | SCL  |
-| PIN4/5V  | VCC  |
-| PIN6/GND  | GND  |
+| Raspberry pi 5 | SHT31-F |
+|----------------|---|
+| PIN3/GPIO2/SDA | SDA  |
+| PIN5/GPIO3/SCL | SCL  |
+| PIN1/3.3V      | VCC  |
+| PIN6/GND       | GND  |
 
 - ### Instalación libreria SHT31
 En una terminal ejecuta el siguiente codigo
