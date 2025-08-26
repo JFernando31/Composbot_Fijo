@@ -32,5 +32,6 @@ En este diagrama se muestra las conexion entre cada uno de los sensores y modulo
 
 ![img_4.png](img_4.png)
 
-[!WARNING] 
-No conecte el TCA9548A a 5V ya que podria dañar el puerto I2C de la raspberry pi.
+>[!WARNING] 
+>
+>No conecte el TCA9548A a 5V ya que podria dañar el puerto I2C de la raspberry pi.
