@@ -81,9 +81,18 @@ sudo i2cdetect -y 1
 Se mostrará una matriz, en donde se podra visualizar los dipositivos conectados al puerto I2C, en este caso el TCA9548A viene por defecto con el 0x70, entonces en el terminal debe poder visualizarse el numero 70 en la matriz indicando que el dispositvo esta conectado 
 
 ~~~~
-
+composbot@composbot:~$ sudo i2cdetect -y 1
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: 70 -- -- -- -- -- -- --  
 ~~~~
-
+si no le aparece el nombre del dispositivo, revise sus conexion, o prueba utilizando esp32 o arduino. 
 ~~~~
 sudo pip3 install adafruit-circuitpython-tca9548a
 sudo pip3 install adafruit-circuitpython-ads1x15
